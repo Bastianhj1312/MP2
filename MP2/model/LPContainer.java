@@ -27,6 +27,10 @@ public class LPContainer
             nextNo++;
             
         }
+      
+        public ArrayList<LP> getAll() {
+        return new ArrayList<>(lps);
+    }
 
     }
     
