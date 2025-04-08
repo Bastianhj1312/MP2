@@ -6,4 +6,6 @@ comment2.params=
 comment2.target=LPContainer()
 comment3.params=lp
 comment3.target=void\ addLP(LP)
-numComments=4
+comment4.params=
+comment4.target=java.util.ArrayList\ getAll()
+numComments=5
