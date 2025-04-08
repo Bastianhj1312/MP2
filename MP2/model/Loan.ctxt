@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Loan
+comment1.params=f\ l\ loanNumber\ borrowDate\ returnDate\ status
+comment1.target=Loan(Friend,\ LPCopy,\ int,\ java.lang.String,\ java.lang.String,\ boolean)
+comment2.params=
+comment2.target=Loan\ add()
+comment3.params=
+comment3.target=Friend\ getFriend()
+comment4.params=
+comment4.target=LPCopy\ getLP()
+numComments=5
