@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.target=LPCopy
-comment1.params=music
-comment1.target=LPCopy(java.lang.String)
+comment1.params=serialNumber\ purchaseDate\ purchasePrice
+comment1.target=LPCopy(java.lang.String,\ java.lang.String,\ double)
 numComments=2
