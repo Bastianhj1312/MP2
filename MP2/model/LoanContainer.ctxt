@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=LoanContainer
+comment1.params=
+comment1.target=LoanContainer\ getInstance()
+comment2.params=
+comment2.target=LoanContainer()
+comment3.params=loan
+comment3.target=void\ addLoan(Loan)
+numComments=4
