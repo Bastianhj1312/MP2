@@ -7,6 +7,11 @@ public class LoanContainer
     private static LoanContainer instance;
     private int nextNo;
 
+     private LoanContainer()
+    {
+        loaners = new ArrayList<>();
+        nextNo = 1;
+    }
     
     public static LoanContainer getInstance(){
         if(instance == null) {
@@ -16,15 +21,12 @@ public class LoanContainer
         return instance;
     }
 
-    private LoanContainer()
-    {
-        loaners = new ArrayList<>();
-        nextNo = 1;
-    }
+   
     
     public void addLoan(Loan loan) {
-            loaners.add(loan);
-            nextNo++;
+        this.nextNo++;
+        loaners.add(loan);
+            
             
         }
 

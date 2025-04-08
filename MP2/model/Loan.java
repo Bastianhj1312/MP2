@@ -5,13 +5,13 @@ public class Loan
     private FriendContainer fc;
     private LPContainer lpc;
     private Loan loan;
-    private int loanNumber;
+    private String loanNumber;
     private String borrowDate;
     private String returnDate;
     private boolean status;
 
     
-    public Loan(int loanNumber, String borrowDate, String returnDate, boolean status)
+    public Loan(String loanNumber, String borrowDate, String returnDate, boolean status)
     {
         this.loanNumber = loanNumber;
         this.borrowDate = borrowDate;
