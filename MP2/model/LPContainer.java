@@ -33,9 +33,10 @@ public class LPContainer
     
     public LP findLPSN(String serialNumber){
         for(LP lp: lps) {
-            if(lp.getSerialNumber() == serialNumber) {
+            if(lp.getSerialNumber().equals(serialNumber)) {
                 return lp;
             }
+
         }
         return null;
     }
