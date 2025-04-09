@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class LPContainer
 {
-    private ArrayList<LP> lps;
+    public ArrayList<LP> lps;
     private static LPContainer instance;
     private int nextNo;
 
