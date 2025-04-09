@@ -6,6 +6,4 @@ comment2.params=
 comment2.target=FriendContainer()
 comment3.params=friend
 comment3.target=void\ addFriend(Friend)
-comment4.params=phone
-comment4.target=Friend\ findPhone(int)
-numComments=5
+numComments=4
