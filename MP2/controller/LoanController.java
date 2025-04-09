@@ -7,15 +7,17 @@ public class LoanController
     private Friend friend;
     public LoanController()
     {
-    loancontainer = loancontainer.getInstance();
+        loancontainer = loancontainer.getInstance();
     }
+
     public void createLoan(String loanNumber, String borrowDate, String returnDate, boolean status){
         Loan loan = new Loan(loanNumber,borrowDate,returnDate,status);
         loancontainer.addLoan(loan);
     }
+
     public Friend addFriend(int phone){
         Friend friend = new Friend(phone);
-        
+
         return friend;
     }
 }
