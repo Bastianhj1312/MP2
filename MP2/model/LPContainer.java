@@ -7,6 +7,11 @@ public class LPContainer
     private static LPContainer instance;
     private int nextNo;
 
+        private LPContainer()
+    {
+        lps = new ArrayList<>();
+        nextNo = 1;
+    }
     
     public static LPContainer getInstance(){
         if(instance == null) {
@@ -14,12 +19,6 @@ public class LPContainer
         }
 
         return instance;
-    }
-
-    private LPContainer()
-    {
-        lps = new ArrayList<>();
-        nextNo = 1;
     }
     
     public void addLP(LP lp) {
