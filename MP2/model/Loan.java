@@ -2,8 +2,6 @@ package MP2.model;
 
 public class Loan
 {
-    private FriendContainer fc;
-    private LPContainer lpc;
     private Loan loan;
     private String loanNumber;
     private String borrowDate;
@@ -21,14 +19,6 @@ public class Loan
 
     public Loan add() {
         return loan;
-    }
-
-    private FriendContainer getFriend() {
-        return fc;
-    }
-
-    private LPContainer getLP() {
-        return lpc;
     }
 
 }

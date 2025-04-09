@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class LPContainer
 {
-    private ArrayList<LP> lps;
+    public ArrayList<LP> lps;
     private static LPContainer instance;
     private int nextNo;
 
@@ -29,6 +29,16 @@ public class LPContainer
       
         public ArrayList<LP> getAll() {
         return new ArrayList<>(lps);
+    }
+    
+    public LP findLPSN(String serialNumber){
+        for(LP lp: lps) {
+            if(lp.getSerialNumber() == serialNumber) {
+                return lp;
+            }
+            return null;
+        }
+        return null;
     }
 
     }
