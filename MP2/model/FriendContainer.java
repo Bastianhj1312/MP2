@@ -6,7 +6,6 @@ public class FriendContainer
     private ArrayList<Friend> friends;
     private static FriendContainer instance;
     private int nextNo;
-    private int friendPhone;
 
     
     public static FriendContainer getInstance(){
