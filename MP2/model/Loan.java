@@ -7,6 +7,8 @@ public class Loan
     private String borrowDate;
     private String returnDate;
     private boolean status;
+    private Friend friend;
+    private LPCopy lpcopy;
 
     
     public Loan(String loanNumber, String borrowDate, String returnDate, boolean status)
@@ -20,6 +22,16 @@ public class Loan
     public Loan add() {
         return loan;
     }
+    
+    public void setFriend(Friend friend){
+        this.friend = friend;
+    }
+    
+    public void setLPCopy(LPCopy lpcopy){
+        this.lpcopy = lpcopy;
+    }
+    
+    
      public String getLoanNumber() {
         return loanNumber;
     }

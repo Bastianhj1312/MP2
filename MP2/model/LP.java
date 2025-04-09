@@ -23,7 +23,6 @@ public class LP
     public void setLpcopy(LPCopy lpcopy) {
         this.lpcopy = lpcopy;
     }
-
     public String getBarcode() {
         return barcode;
     }

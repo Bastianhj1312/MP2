@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class LPController
 {
     private LPContainer lPContainer;  // The container with the ArrayList of LPs
+    private LP lp;
 
     // Constructor
     public LPController() {
@@ -13,10 +14,10 @@ public class LPController
         }
 
     // Method to find LP by serial number
-    public LP findLP(int serialNumber) {
+    public LP findLP(LPCopy lpcopy) {
         // Use your findLPSN method from LPContainer
         
-        return lPContainer.findLPSN(String.valueOf(serialNumber));
+        return lPContainer.findLPSN(String.valueOf(lpcopy));
 
     }
 
