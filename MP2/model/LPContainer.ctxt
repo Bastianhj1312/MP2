@@ -8,4 +8,6 @@ comment3.params=lp
 comment3.target=void\ addLP(LP)
 comment4.params=
 comment4.target=java.util.ArrayList\ getAll()
-numComments=5
+comment5.params=serialNumber
+comment5.target=java.util.ArrayList\ findLPSN(java.lang.String)
+numComments=6

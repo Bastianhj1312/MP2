@@ -2,4 +2,16 @@
 comment0.target=LPCopy
 comment1.params=serialNumber\ purchaseDate\ purchasePrice
 comment1.target=LPCopy(java.lang.String,\ java.lang.String,\ double)
-numComments=2
+comment2.params=
+comment2.target=java.lang.String\ getSerialNumber()
+comment3.params=serialNumber
+comment3.target=void\ setSerialNumber(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getPurchaseDate()
+comment5.params=purchaseDate
+comment5.target=void\ setPurchaseDate(java.lang.String)
+comment6.params=
+comment6.target=double\ getPurchasePrice()
+comment7.params=purchasePrice
+comment7.target=void\ setPurchasePrice(double)
+numComments=8

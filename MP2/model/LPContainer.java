@@ -31,6 +31,16 @@ public class LPContainer
         public ArrayList<LP> getAll() {
         return new ArrayList<>(lps);
     }
+    
+    public ArrayList<LP> findLPSN(String serialNumber){
+        for(LP lp: lps) {
+            if(lp.getSerialNumber() == serialNumber) {
+                return lps;
+            }
+            return null;
+        }
+        return null;
+    }
 
     }
     
