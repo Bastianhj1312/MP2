@@ -29,12 +29,11 @@ public class LoanController
         return friend;
     }
 
-    public LP addLP(LPCopy lpcopy){
+    public LPCopy addLPCopy(int serialNumber){
         LPController lpc = new LPController();
-        LP lp = lpc.findLP(lpcopy);
-        lpcopy.setSerialNumber(lp);
-        
-        return lp;
+        LPCopy copy = lpc.findLPCopy(serialNumber);
+        loan.setLPCopy(copy);
+        return copy;
     }
 
     public Loan endLoan() {

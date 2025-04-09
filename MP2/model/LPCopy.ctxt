@@ -1,11 +1,11 @@
 #BlueJ class context
 comment0.target=LPCopy
 comment1.params=serialNumber\ purchaseDate\ purchasePrice
-comment1.target=LPCopy(java.lang.String,\ java.lang.String,\ double)
+comment1.target=LPCopy(int,\ java.lang.String,\ double)
 comment2.params=
-comment2.target=java.lang.String\ getSerialNumber()
+comment2.target=int\ getSerialNumber()
 comment3.params=serialNumber
-comment3.target=void\ setSerialNumber(java.lang.String)
+comment3.target=void\ setSerialNumber(int)
 comment4.params=
 comment4.target=java.lang.String\ getPurchaseDate()
 comment5.params=purchaseDate

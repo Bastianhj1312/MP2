@@ -11,13 +11,13 @@ public class LPController
     // Constructor
     public LPController() {
         lPContainer = LPContainer.getInstance(); // Proper way to get the singleton instance
-        }
+    }
 
     // Method to find LP by serial number
-    public LP findLP(LPCopy lpcopy) {
+    public LPCopy findLPCopy(int serialNumber) {
         // Use your findLPSN method from LPContainer
-        
-        return lPContainer.findLPSN(String.valueOf(lpcopy));
+
+        return lPContainer.findLPSN(serialNumber);
 
     }
 

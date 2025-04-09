@@ -1,8 +1,9 @@
 package MP2.model;
+import java.util.ArrayList;
 
 public class LP
 {
-    private LPCopy lpcopy;
+    private ArrayList<LPCopy> copies;
     private String barcode;
     private String title;
     private String artist;
@@ -14,15 +15,16 @@ public class LP
         this.title = title;
         this.artist = artist;
         this.publicationDate = publicationDate;
+        copies = new ArrayList<>();
     }
 
-    public LPCopy getLpcopy() {
-        return lpcopy;
-    }
+    // public LPCopy getLpcopy() {
+        // return lpcopy;
+    // }
 
-    public void setLpcopy(LPCopy lpcopy) {
-        this.lpcopy = lpcopy;
-    }
+    // public void setLpcopy(LPCopy lpcopy) {
+        // this.lpcopy = lpcopy;
+    // }
     public String getBarcode() {
         return barcode;
     }
@@ -55,8 +57,8 @@ public class LP
         this.publicationDate = publicationDate;
     }
     
-    public String getSerialNumber(){
-        return lpcopy.getSerialNumber();
-    }
+    // public int getSerialNumber(){
+        // return lpcopy.getSerialNumber();
+    // }
 }
 

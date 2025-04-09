@@ -2,21 +2,21 @@ package MP2.model;
 
 public class LPCopy
 {
-    private String serialNumber;
+    private int serialNumber;
     private String purchaseDate;
     private double purchasePrice;
-    public LPCopy(String serialNumber, String purchaseDate, double purchasePrice)
+    public LPCopy(int serialNumber, String purchaseDate, double purchasePrice)
     {
         this.serialNumber = serialNumber;
         this.purchaseDate = purchaseDate;
         this.purchasePrice = purchasePrice;
     }
 
-    public String getSerialNumber() {
+    public int getSerialNumber() {
         return serialNumber;
     }
 
-    public void setSerialNumber(String serialNumber) {
+    public void setSerialNumber(int serialNumber) {
         this.serialNumber = serialNumber;
     }
 
