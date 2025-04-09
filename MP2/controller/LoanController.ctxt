@@ -8,4 +8,6 @@ comment3.params=name\ phone\ address\ postalcode\ city
 comment3.target=MP2.model.Friend\ addFriend(java.lang.String,\ int,\ java.lang.String,\ int,\ java.lang.String)
 comment4.params=barcode\ title\ artist\ publicationDate\ lpcopy
 comment4.target=MP2.model.LP\ addLP(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ MP2.model.LPCopy)
-numComments=5
+comment5.params=loanNumber
+comment5.target=MP2.model.Loan\ endLoan(java.lang.String)
+numComments=6

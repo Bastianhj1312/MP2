@@ -1,7 +1,6 @@
 package MP2.controller;
 import MP2.model.*;
 
-
 public class LoanController
 {
     private LoanContainer loancontainer;
@@ -27,4 +26,14 @@ public class LoanController
         lpcontainer.addLP(lp);
         return lp;
     }
+    public Loan endLoan(String loanNumber) {
+    Loan loan = loancontainer.findLoan(loanNumber);
+    if (loan != null) {
+        loan.setStatus(true); // Mark as returned
+        return loan;
+    } else {
+        System.out.println("Kan ikke finde lånet");
+        return null;
+    }
+}
 }

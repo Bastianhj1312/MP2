@@ -20,5 +20,20 @@ public class Loan
     public Loan add() {
         return loan;
     }
+     public String getLoanNumber() {
+        return loanNumber;
+    }
+    public boolean getStatus() {
+        return status;
+    }
+    public String getReturnDate() {
+        return returnDate;
+    }
+    public void setReturnDate(String returnDate) {
+        this.returnDate = returnDate;
+    }
 
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
 }
