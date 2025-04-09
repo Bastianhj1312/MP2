@@ -57,7 +57,7 @@ public class LP
     }
     
     public String getSerialNumber(){
-        return getSerialNumber();
+        return lpcopy.getSerialNumber();
     }
 }
 

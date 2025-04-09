@@ -32,10 +32,10 @@ public class LPContainer
         return new ArrayList<>(lps);
     }
     
-    public ArrayList<LP> findLPSN(String serialNumber){
+    public LP findLPSN(String serialNumber){
         for(LP lp: lps) {
             if(lp.getSerialNumber() == serialNumber) {
-                return lps;
+                return lp;
             }
             return null;
         }
