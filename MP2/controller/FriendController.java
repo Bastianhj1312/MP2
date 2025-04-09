@@ -12,13 +12,12 @@ public class FriendController {
     private Friend friend;
 
     public FriendController(int phone) {
-        friendContainer = friendContainer.getInstance();
-        phone = 0;
-        friend = friend;
+        friendContainer = FriendContainer.getInstance();
     }
     
         public Friend findFriend(int phone){
-        friend.getPhone();
-        return friend;
+        return friendContainer.findPhone(phone);
     }
+    
+    
 }

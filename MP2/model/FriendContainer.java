@@ -29,8 +29,13 @@ public class FriendContainer
             
         }
         
-
-
+    public Friend findPhone(int phone){
+        for(Friend f: friends) {
+            if(f.getPhone() == phone) {
+                return f;
+            }
+        }
+        return null;
     }
-    
+}
 

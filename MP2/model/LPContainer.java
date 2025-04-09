@@ -36,7 +36,6 @@ public class LPContainer
             if(lp.getSerialNumber() == serialNumber) {
                 return lp;
             }
-            return null;
         }
         return null;
     }
