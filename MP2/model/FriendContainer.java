@@ -27,27 +27,9 @@ public class FriendContainer
             friends.add(friend);
             nextNo++;
             
-            this.friendPhone++;
-            friend.setPhone(friendPhone);
-            
         }
         
-        
-        public Friend findCustomerById(int id){
-        Friend friend = null;
-        boolean found = false;
-        int i = 0;
-        while(!found && i < friends.size()){
-            Friend c = friends.get(i);
-            if(c.getPhone()==phone){
-                friends = c;
-                found = true;
-            }
-            else { i++; }
-        }
-        return friend;
-    
-    }
+
 
     }
     
