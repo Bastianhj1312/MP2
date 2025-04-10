@@ -8,6 +8,7 @@ public class LP
     private String title;
     private String artist;
     private String publicationDate;
+    private int serialNumber;
 
     public LP(String barcode, String title, String artist, String publicationDate, LPCopy lpcopy)
     {
@@ -28,7 +29,6 @@ public class LP
     public String getBarcode() {
         return barcode;
     }
-
     public void setBarcode(String barcode) {
         this.barcode = barcode;
     }
@@ -46,7 +46,7 @@ public class LP
     }
 
     public void setArtist(String artist) {
-        this.artist = artist;
+        this.artist = artist;   
     }
 
     public String getPublicationDate() {
@@ -60,5 +60,28 @@ public class LP
     // public int getSerialNumber(){
         // return lpcopy.getSerialNumber();
     // }
+    
+    public LPCopy findCopy(int serialNumber) {
+        
+        LPCopy result = null;
+        
+        boolean searching = true;
+        int index = 0;
+        
+        
+        while (index < copies.size() && searching){
+            LPCopy c = copies.get(index);
+            if (c.getSerialNumber()== serialNumber) {
+                searching = false;
+                result = c;             
+            } else {
+                index++;
+            }
+        }
+        System.out.println(result);
+        return result;
+        
+        
+    }
 }
 

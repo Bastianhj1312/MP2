@@ -5,6 +5,7 @@ public class LPContainer
 {
     public ArrayList<LP> lps;
     private static LPContainer instance;
+    private LPCopy lpcopy;
     private int nextNo;
 
     private LPContainer()
@@ -32,10 +33,25 @@ public class LPContainer
     }
 
     //TODO
-    public LPCopy findLPSN(int serialNumber){
-
-        return null;
+    public LPCopy findLPSN(int serialNumber) {
+         
+         LPCopy result = null;
+        
+        boolean searching = true;
+        int index = 0;
+        
+        
+        while (index < lps.size() && searching){
+            LP lp = lps.get(index);
+            LPCopy c = lp.findCopy(serialNumber);
+            if (c!=null) {
+                searching = false;
+                result = c;             
+            } else {
+                index++;
+            }
+        }
+        return result;
     }
-
-}
+    }
 
