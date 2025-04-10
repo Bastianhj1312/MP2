@@ -2,6 +2,8 @@
 comment0.target=LP
 comment1.params=barcode\ title\ artist\ publicationDate\ lpcopy
 comment1.target=LP(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ LPCopy)
+comment10.params=serialNumber
+comment10.target=LPCopy\ findCopy(int)
 comment2.params=
 comment2.target=java.lang.String\ getBarcode()
 comment3.params=barcode
@@ -18,4 +20,4 @@ comment8.params=
 comment8.target=java.lang.String\ getPublicationDate()
 comment9.params=publicationDate
 comment9.target=void\ setPublicationDate(java.lang.String)
-numComments=10
+numComments=11
