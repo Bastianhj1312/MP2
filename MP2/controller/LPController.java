@@ -14,10 +14,10 @@ public class LPController
     }
 
     // Method to find LP by serial number
-    public LPCopy findLPCopy(int serialNumber) {
+    public LP findLP(String barcode) {
         // Use your findLPSN method from LPContainer
 
-        return lPContainer.findLPSN(serialNumber);
+        return lPContainer.findLP(barcode);
 
     }
 

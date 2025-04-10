@@ -7,7 +7,6 @@ public class FriendContainer
     private static FriendContainer instance;
     private int nextNo;
 
-    
     public static FriendContainer getInstance(){
         if(instance == null) {
             instance = new FriendContainer();
@@ -21,20 +20,18 @@ public class FriendContainer
         friends = new ArrayList<>();
         nextNo = 1;
     }
-    
+
     public boolean addFriend(Friend friend) {
-           Friend conflict = findPhone(friend.getPhone());
+        Friend conflict = findPhone(friend.getPhone());
         boolean fres = false;
         if (conflict == null) {
             friends.add(friend);
-            friend.setPhone(nextNo);
-            nextNo++;
             fres = true;
         }
         return fres;
 
-        }
-        
+    }
+
     public Friend findPhone(int phone){
         for(Friend f: friends) {
             if(f.getPhone() == phone) {

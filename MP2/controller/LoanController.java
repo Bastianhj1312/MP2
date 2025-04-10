@@ -24,23 +24,26 @@ public class LoanController
         return loan;
     }
 
-    public Friend addFriend(int phone){
-       FriendController fpc = new FriendController();
-        Friend friend = fpc.findFriend(phone);
-        loan.setFriend(friend);
-        return friend;
+    public Friend addFriend(int phone) {
+        // Ensure loan is initialized before trying to add a friend
+        if (loan == null) {
+            System.out.println("Error: Loan has not been created.");
+            return null;
+        }
+
+        Friend friend = friendcontainer.findPhone(phone);
+        if (friend != null) {
+            loan.setFriend(friend);  // Set the friend for the loan
+        }
+        return friend; // Return the found friend or null if not found
     }
 
-    public LPCopy addLPCopy(int serialNumber){
+    public LP addLP(String barcode){
         LPController lpc = new LPController();
-        LPCopy copy = lpc.findLPCopy(serialNumber);
-        loan.setLPCopy(copy);
-        return copy;
+        LP lp = lpc.findLP(barcode);
+        loan.setLP(lp);
+        return lp;
     }
 
-    public Loan endLoan() {
-        loancontainer.addLoan(loan);
-        return loan;
-
-    }
+    
 }

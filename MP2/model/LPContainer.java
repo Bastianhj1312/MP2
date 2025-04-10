@@ -22,36 +22,28 @@ public class LPContainer
         return instance;
     }
 
-    public void addLP(LP lp) {
-        lps.add(lp);
-        nextNo++;
+    public boolean addLP(LP lp) {
+        LP conflict = findLP(lp.getBarcode());
+        boolean lpres = false;
+        if (conflict == null) {
+            lps.add(lp);
+            lpres = true;
+        }
+        return lpres;
 
     }
 
     public ArrayList<LP> getAll() {
         return new ArrayList<>(lps);
     }
-
-    //TODO
-    public LPCopy findLPSN(int serialNumber) {
-         
-         LPCopy result = null;
-        
-        boolean searching = true;
-        int index = 0;
-        
-        
-        while (index < lps.size() && searching){
-            LP lp = lps.get(index);
-            LPCopy c = lp.findCopy(serialNumber);
-            if (c!=null) {
-                searching = false;
-                result = c;             
-            } else {
-                index++;
+    
+     public LP findLP(String barCode){
+        for(LP lpc: lps) {
+            if(lpc.getBarcode().equals(barCode)) {
+                return lpc;
             }
         }
-        return result;
+        return null;
     }
-    }
+}
 

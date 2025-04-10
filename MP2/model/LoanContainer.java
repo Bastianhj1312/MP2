@@ -5,6 +5,7 @@ public class LoanContainer
 {
     private ArrayList<Loan> loaners;
     private static LoanContainer instance;
+    private Loan loan;
     private int nextNo;
 
     private LoanContainer()
@@ -45,6 +46,12 @@ public class LoanContainer
             }
         }
         return null;
+    }
+    
+    public Loan endLoan() {
+        addLoan(loan);
+        return loan;
+
     }
 }
 

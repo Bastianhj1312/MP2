@@ -10,4 +10,6 @@ comment4.params=
 comment4.target=java.util.ArrayList\ getAllLoans()
 comment5.params=loanNumber
 comment5.target=Loan\ findLoan(int)
-numComments=6
+comment6.params=
+comment6.target=Loan\ endLoan()
+numComments=7

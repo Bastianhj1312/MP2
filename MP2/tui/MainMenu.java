@@ -14,6 +14,7 @@ public class MainMenu {
     private LoanMenu loanMenu;
     private LoanController lc;
     private Loan loan;
+   
     
 
     /**
@@ -40,10 +41,10 @@ public class MainMenu {
                  createPhone();
                   break;
                 case 2:
-                  createLoan();
+                  createLP();
                   break;
                 case 3:
-                  loanMenu.start();
+                  createLoan();
                   break;
                 case 0:
                   System.out.println("Tak for denne gang.");
@@ -59,7 +60,7 @@ public class MainMenu {
     private int writeMainMenu() {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("****** Hovedmenu ******");
-        System.out.println(" (1) Lånermenu");
+        System.out.println(" (1) Friendmenu");
         System.out.println(" (2) LP menu");
         System.out.println(" (3) Udlånsmenu");
         System.out.println(" (0) Afslut programmet");
@@ -79,44 +80,7 @@ public class MainMenu {
         
     }
     
-    private int inputLoanNumber() {
-        // makes an object keyboard to read input from the console
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println(" Indtast int Loan Number: ");
-        int loanNumber = keyboard.nextInt();
-        return loanNumber;
-    }
-    private String inputBorrowDate() {
-        // makes an object keyboard to read input from the console
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println(" Indtast Borrow Date: ");
-        String borrowDate = keyboard.nextLine();
-        return borrowDate;
-    }
-    private String inputReturnDate() {
-        // makes an object keyboard to read input from the console
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println(" Indtast Return Date: ");
-        String returnDate = keyboard.nextLine();
-        return returnDate;
-    }
-    private boolean inputStatus() {
-        // makes an object keyboard to read input from the console
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println(" Indtast Status: ");
-        boolean status = keyboard.nextBoolean();
-        return status;
-    }
-    
-    private void createLoan() {
-       int loanNumber = inputLoanNumber();
-       String borrowDate = inputBorrowDate();
-       String returnDate = inputReturnDate();
-       boolean status = inputStatus();
-       lc.createLoan(loanNumber, borrowDate, returnDate, status);
-    }
-    
-    
+   
     private int inputPhone() {
         // makes an object keyboard to read input from the console
         Scanner keyboard = new Scanner(System.in);
@@ -128,6 +92,27 @@ public class MainMenu {
     private void createPhone() {
         int phone = inputPhone();
         lc.addFriend(phone);
+    }
+    
+   private String inputLP() {
+        // makes an object keyboard to read input from the console
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println(" Indtast Serial Nummer: ");
+        String barcode = keyboard.nextLine();
+        return barcode;
+    }
+    
+    private void createLP() {
+        String barcode = inputLP();
+        lc.addLP(barcode);
+    }
+    
+    private void createLoan() {
+       int loanNumber = loanMenu.inputLoanNumber();
+       String borrowDate = loanMenu.inputBorrowDate();
+       String returnDate = loanMenu.inputReturnDate();
+       boolean status = loanMenu.inputStatus();
+       loan = lc.createLoan(loanNumber, borrowDate, returnDate, status);
     }
     
     }

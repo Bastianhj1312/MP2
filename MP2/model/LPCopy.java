@@ -5,6 +5,7 @@ public class LPCopy
     private int serialNumber;
     private String purchaseDate;
     private double purchasePrice;
+    
     public LPCopy(int serialNumber, String purchaseDate, double purchasePrice)
     {
         this.serialNumber = serialNumber;

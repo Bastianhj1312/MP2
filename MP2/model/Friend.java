@@ -7,6 +7,7 @@ public class Friend
     private String address;
     private int postalcode;
     private String city;
+   
 
     public Friend(String name, int phone, String address, int postalcode, String city) {
         this.name = name;
@@ -55,4 +56,6 @@ public class Friend
     public void setCity(String city) {
         this.city = city;
     }
+    
+    
 }

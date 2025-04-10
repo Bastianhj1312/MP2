@@ -8,7 +8,6 @@ public class LP
     private String title;
     private String artist;
     private String publicationDate;
-    private int serialNumber;
 
     public LP(String barcode, String title, String artist, String publicationDate, LPCopy lpcopy)
     {
@@ -56,6 +55,8 @@ public class LP
     public void setPublicationDate(String publicationDate) {
         this.publicationDate = publicationDate;
     }
+    
+    
     
     // public int getSerialNumber(){
         // return lpcopy.getSerialNumber();

@@ -9,7 +9,7 @@ public class Loan
     private String returnDate;
     private boolean status;
     private Friend friend;
-    private LPCopy lpcopy;
+    private LP lp;
 
     private Scanner scanner;
     
@@ -29,8 +29,8 @@ public class Loan
         this.friend = friend;
     }
     
-    public void setLPCopy(LPCopy lpcopy){
-        this.lpcopy = lpcopy;
+    public void setLP(LP lp){
+        this.lp = lp;
     }
     
     

@@ -1,6 +1,7 @@
 package MP2.tui;
 import java.util.Scanner;
-
+import MP2.controller.*;
+import MP2.model.*;
 
 /**
  * Write a description of class LoanMenu here.
@@ -11,12 +12,14 @@ import java.util.Scanner;
 public class LoanMenu {
     // instance variables
     private Scanner scanner;
+    private LoanController lc;
+    private Loan loan;
 
     /**
      * Constructor for objects of class LoanMenu
      */
     public LoanMenu() {
-        // initialise instance variables
+       lc = new LoanController();
 
     }
     public void start() {
@@ -29,7 +32,7 @@ public class LoanMenu {
             int choice = writeLoanMenu();
             switch (choice) {
                 case 1:
-                    System.out.println(" Denne er ikke implementeret endnu!");
+                    System.out.println("En uforklarlig fejl er sket med choice = " + choice);
                     break;
                 case 0:
                     running = false;
@@ -59,37 +62,39 @@ public class LoanMenu {
         return keyboard.nextInt();
     }
 
-    public String inputBorrowDate(String prompt) {
-        System.out.print(prompt + ": ");
-        String res = scanner.nextLine();
-        return res;
-    }
-
-    public int inputLoanNumber(String prompt) {
-        System.out.print(prompt + ": ");
-        int res = scanner.nextInt();
-        scanner.nextLine();
-        return res;
-    }
-
-    public String inputReturnDate(String prompt) {
-        System.out.print(prompt + ": ");
-        String res = scanner.nextLine();
-        return res;
-    }
-
-    public boolean inputStatus(String prompt) {
-        System.out.print(prompt + ": ");
-        boolean res = scanner.nextBoolean();
-        scanner.nextLine();
-        return res;
+     public int inputLoanNumber() {
+        // makes an object keyboard to read input from the console
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println(" Indtast int Loan Number: ");
+        int loanNumber = keyboard.nextInt();
+        return loanNumber;
     }
     
-    public int inputPhone(String prompt) {
-        System.out.print(prompt + ": ");
-       int res = scanner.nextInt();
-        scanner.nextLine();
-        return res;
+     public String inputBorrowDate() {
+        // makes an object keyboard to read input from the console
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println(" Indtast Borrow Date: ");
+        String borrowDate = keyboard.nextLine();
+        return borrowDate;
     }
+    
+     public String inputReturnDate() {
+        // makes an object keyboard to read input from the console
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println(" Indtast Return Date: ");
+        String returnDate = keyboard.nextLine();
+        return returnDate;
+    }
+    
+     public boolean inputStatus() {
+        // makes an object keyboard to read input from the console
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println(" Indtast Status: ");
+        boolean status = keyboard.nextBoolean();
+        return status;
+    }
+    
+
+    
 }
 
