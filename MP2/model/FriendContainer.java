@@ -22,10 +22,17 @@ public class FriendContainer
         nextNo = 1;
     }
     
-    public void addFriend(Friend friend) {
+    public boolean addFriend(Friend friend) {
+           Friend conflict = findPhone(friend.getPhone());
+        boolean fres = false;
+        if (conflict == null) {
             friends.add(friend);
+            friend.setPhone(nextNo);
             nextNo++;
-            
+            fres = true;
+        }
+        return fres;
+
         }
         
     public Friend findPhone(int phone){

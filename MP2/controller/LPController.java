@@ -6,17 +6,18 @@ import java.util.ArrayList;
 public class LPController
 {
     private LPContainer lPContainer;  // The container with the ArrayList of LPs
+    private LP lp;
 
     // Constructor
     public LPController() {
         lPContainer = LPContainer.getInstance(); // Proper way to get the singleton instance
-        }
+    }
 
     // Method to find LP by serial number
-    public LP findLP(int serialNumber) {
+    public LPCopy findLPCopy(int serialNumber) {
         // Use your findLPSN method from LPContainer
-        
-        return lPContainer.findLPSN(String.valueOf(serialNumber));
+
+        return lPContainer.findLPSN(serialNumber);
 
     }
 

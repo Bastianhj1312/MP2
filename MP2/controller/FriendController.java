@@ -9,15 +9,14 @@ import MP2.model.*;
  */
 public class FriendController {
     private FriendContainer friendContainer;
-    private Friend friend;
+    //private Friend friend;
 
-    public FriendController(int phone) {
+    public FriendController() {
         friendContainer = FriendContainer.getInstance();
     }
-    
-        public Friend findFriend(int phone){
+
+    public Friend findFriend(int phone){
         return friendContainer.findPhone(phone);
     }
-    
-    
+
 }

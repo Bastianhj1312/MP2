@@ -7,12 +7,12 @@ public class LPContainer
     private static LPContainer instance;
     private int nextNo;
 
-        private LPContainer()
+    private LPContainer()
     {
         lps = new ArrayList<>();
         nextNo = 1;
     }
-    
+
     public static LPContainer getInstance(){
         if(instance == null) {
             instance = new LPContainer();
@@ -20,27 +20,22 @@ public class LPContainer
 
         return instance;
     }
-    
+
     public void addLP(LP lp) {
-            lps.add(lp);
-            nextNo++;
-            
-        }
-      
-        public ArrayList<LP> getAll() {
+        lps.add(lp);
+        nextNo++;
+
+    }
+
+    public ArrayList<LP> getAll() {
         return new ArrayList<>(lps);
     }
-    
-    public LP findLPSN(String serialNumber){
-        for(LP lp: lps) {
-            if(lp.getSerialNumber().equals(serialNumber)) {
-                return lp;
-            }
 
-        }
+    //TODO
+    public LPCopy findLPSN(int serialNumber){
+
         return null;
     }
 
-    }
-    
+}
 

@@ -21,9 +21,16 @@ public class LoanContainer
         return instance;
     } 
 
-    public void addLoan(Loan loan) {
-        this.nextNo++;
-        loaners.add(loan);
+    public boolean addLoan(Loan loan) {
+        Loan conflict = findLoan(loan.getLoanNumber());
+        boolean loanres = false;
+        if (conflict == null) {
+            loaners.add(loan);
+            loan.setLoanNumber(nextNo);
+            nextNo++;
+            loanres = true;
+        }
+        return loanres;
 
     }
 
@@ -31,9 +38,9 @@ public class LoanContainer
         return new ArrayList<>(loaners);
     }
 
-    public Loan findLoan(String loanNumber) {
+    public Loan findLoan(int loanNumber) {
         for (Loan loan : loaners) {
-            if (loan.getLoanNumber().equals(loanNumber)) {
+            if (loan.getLoanNumber() == loanNumber) {
                 return loan;
             }
         }
