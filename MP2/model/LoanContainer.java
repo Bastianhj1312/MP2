@@ -7,12 +7,12 @@ public class LoanContainer
     private static LoanContainer instance;
     private int nextNo;
 
-     private LoanContainer()
+    private LoanContainer()
     {
         loaners = new ArrayList<>();
         nextNo = 1;
     }
-    
+
     public static LoanContainer getInstance(){
         if(instance == null) {
             instance = new LoanContainer();
@@ -20,15 +20,17 @@ public class LoanContainer
 
         return instance;
     } 
+
     public void addLoan(Loan loan) {
         this.nextNo++;
         loaners.add(loan);
-            
-            
-        }
+
+    }
+
     public ArrayList<Loan> getAllLoans(){
         return new ArrayList<>(loaners);
     }
+
     public Loan findLoan(String loanNumber) {
         for (Loan loan : loaners) {
             if (loan.getLoanNumber().equals(loanNumber)) {
@@ -37,6 +39,5 @@ public class LoanContainer
         }
         return null;
     }
-    }
-    
+}
 
